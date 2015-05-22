@@ -1,0 +1,16 @@
+<?php
+            if(isset($_POST) && isset($_POST['semail']){
+	            if(!empty($_POST['semail'])){
+
+			            echo 'Thank you for subscribibng';
+                        $subemail = fopen("Subscribers' list.txt","w+");
+
+                        fputs($subemail, "Subscriber's email : ");
+                        fputs($subemail, $_POST['semail']);
+
+                        fclose($subemail);
+                } else {
+                    echo "An error has occured"
+                }
+            }
+                ?>

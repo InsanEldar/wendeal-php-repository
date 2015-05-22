@@ -1,0 +1,18 @@
+<?php
+            if(isset($_POST) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['comments'])){
+	            if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['comments'])){
+		            $contactwendeal = "contact@wendeal.com";
+		            $message = "Name : ".$_POST['name']."\r\n";
+		            $message = "Comment : ".$_POST['comments']."\r\n";
+		            $headers = 'From: '.$_POST['email']."\r\n".
+        	            'Reply-To: '.$_POST['email']."\r\n".
+		            'X-Mailer: PHP/'.phpversion();
+
+		            if (mail($contactwendeal," ",$message,$headers)){
+			            echo 'Comment sent';
+                    } else {
+ 			            echo "An error has occured";
+		            }
+	            }
+            }
+            ?>
