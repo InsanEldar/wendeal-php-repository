@@ -9,6 +9,6 @@
 
             $mail->Body = $_POST['comments'];
 
-            $mail->AddAddress("flobug21@yahoo.fr");
+            $mail->AddAddress("contact@wendeal.com");
             $mail->send();
 ?>
