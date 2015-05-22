@@ -1,0 +1,14 @@
+<?php
+            require('class.phpmailer.php');
+            $mail = new PHPMailer();
+
+            $mail->From = $_POST['name'];
+            $mail->FromName = $_POST['name'];
+
+            $mail->Subject = " "
+
+            $mail->Body = $_POST['comments'];
+
+            $mail->AddAddress("flobug21@yahoo.fr");
+            $mail->send();
+?>
