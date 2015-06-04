@@ -1,0 +1,6 @@
+<?php
+                $subemail = stripslashes(nl2br(htmlentities($_POST['semail'])));
+                $openfile = fopen ("semailList.txt", "w+");
+                fwrite($openfile, $subemail);
+                fclose ($openfile);
+              ?>
